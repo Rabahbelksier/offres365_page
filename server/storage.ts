@@ -1,24 +1,18 @@
-import { type Contact, type InsertContact } from "@shared/schema";
+import { db } from "./db";
+import { messageUsers, type MessageUser, type InsertMessage } from "@shared/schema";
 
 export interface IStorage {
-  createContact(contact: InsertContact): Promise<Contact>;
+  createMessage(message: InsertMessage): Promise<MessageUser>;
 }
 
-export class MemStorage implements IStorage {
-  private contacts: Map<number, Contact>;
-  private currentId: number;
-
-  constructor() {
-    this.contacts = new Map();
-    this.currentId = 1;
-  }
-
-  async createContact(insertContact: InsertContact): Promise<Contact> {
-    const id = this.currentId++;
-    const contact: Contact = { ...insertContact, id, createdAt: new Date() };
-    this.contacts.set(id, contact);
-    return contact;
+export class DatabaseStorage implements IStorage {
+  async createMessage(insertMessage: InsertMessage): Promise<MessageUser> {
+    const [message] = await db
+      .insert(messageUsers)
+      .values(insertMessage)
+      .returning();
+    return message;
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

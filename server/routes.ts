@@ -8,11 +8,16 @@ export async function registerRoutes(
   httpServer: Server,
   app: Express
 ): Promise<Server> {
-  // Simple contact route just to have a working API
   app.post(api.contacts.create.path, async (req, res) => {
     try {
       const input = api.contacts.create.input.parse(req.body);
-      const contact = await storage.createContact(input);
+      // Map frontend 'message' to DB 'messages'
+      const dbInput = {
+        name: input.name,
+        email: input.email,
+        messages: input.message
+      };
+      const contact = await storage.createMessage(dbInput);
       res.status(201).json(contact);
     } catch (err) {
       if (err instanceof z.ZodError) {

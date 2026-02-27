@@ -114,13 +114,28 @@ const translations = {
 const I18nContext = createContext<I18nContextType | undefined>(undefined);
 
 export function I18nProvider({ children }: { children: ReactNode }) {
-  const [lang, setLang] = useState<Language>('ar');
+  const [lang, setLangState] = useState<Language>(() => {
+    return (localStorage.getItem('app_lang') as Language) || 'ar';
+  });
+
+  const setLang = (newLang: Language) => {
+    localStorage.setItem('app_lang', newLang);
+    window.location.reload();
+  };
 
   useEffect(() => {
+    const savedLang = localStorage.getItem('app_lang') as Language;
+    const currentLang = savedLang || 'ar';
+    
     // Update HTML dir and lang attributes
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.documentElement.lang = lang;
-    document.title = lang === 'ar' ? 'Offres 365 | عروض 365' : 'Offres 365 | Best Deals';
+    document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = currentLang;
+    document.title = currentLang === 'ar' ? 'Offres 365 | عروض 365' : 'Offres 365 | Best Deals';
+    
+    // Ensure state is synced if needed, though reload handles most
+    if (lang !== currentLang) {
+      setLangState(currentLang);
+    }
   }, [lang]);
 
   const t = (key: string): string => {

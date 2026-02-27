@@ -2,16 +2,15 @@ import { pgTable, text, serial, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
 
-// A simple contacts table if needed for future extensions
-export const contacts = pgTable("contacts", {
+export const messageUsers = pgTable("message_users", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  message: text("message").notNull(),
+  messages: text("messages").notNull(),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export const insertContactSchema = createInsertSchema(contacts).omit({ id: true, createdAt: true });
+export const insertMessageSchema = createInsertSchema(messageUsers).omit({ id: true, createdAt: true });
 
-export type Contact = typeof contacts.$inferSelect;
-export type InsertContact = z.infer<typeof insertContactSchema>;
+export type MessageUser = typeof messageUsers.$inferSelect;
+export type InsertMessage = z.infer<typeof insertMessageSchema>;

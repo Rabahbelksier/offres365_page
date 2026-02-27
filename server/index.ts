@@ -2,6 +2,8 @@ import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
+import { db } from "./db";
+import { sql } from "drizzle-orm";
 
 const app = express();
 const httpServer = createServer(app);
@@ -60,6 +62,24 @@ app.use((req, res, next) => {
 });
 
 (async () => {
+  // Simple table initialization if DB is available
+  if (process.env.DATABASE_URL) {
+    try {
+      await db.execute(sql`
+        CREATE TABLE IF NOT EXISTS message_users (
+          id SERIAL PRIMARY KEY,
+          name TEXT NOT NULL,
+          email TEXT NOT NULL,
+          messages TEXT NOT NULL,
+          created_at TIMESTAMP DEFAULT NOW()
+        );
+      `);
+      log("Database initialized successfully");
+    } catch (err) {
+      log(`Database initialization failed: ${err}`);
+    }
+  }
+
   await registerRoutes(httpServer, app);
 
   app.use((err: any, _req: Request, res: Response, next: NextFunction) => {

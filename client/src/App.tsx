@@ -19,16 +19,16 @@ function Router() {
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="system" storageKey="offres365-theme">
-      <I18nProvider>
+    <I18nProvider>
+      <ThemeProvider defaultTheme="system" storageKey="offres365-theme">
         <QueryClientProvider client={queryClient}>
           <TooltipProvider>
             <Toaster />
             <Router />
           </TooltipProvider>
         </QueryClientProvider>
-      </I18nProvider>
-    </ThemeProvider>
+      </ThemeProvider>
+    </I18nProvider>
   );
 }
 
