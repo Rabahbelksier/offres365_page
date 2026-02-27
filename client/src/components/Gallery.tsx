@@ -6,7 +6,7 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
 
-// Static Imports for Arabic
+// Static Imports for Arabic (Images with Arabic text)
 import ar1 from '@assets/Screenshot_2026-02-27-03-51-20-14_2c05e4041aef5218eaa893165b90_1772162653754.jpg';
 import ar2 from '@assets/Screenshot_2026-02-27-03-52-17-25_2c05e4041aef5218eaa893165b90_1772162653777.jpg';
 import ar3 from '@assets/Screenshot_2026-02-27-03-53-22-98_2c05e4041aef5218eaa893165b90_1772162653786.jpg';
@@ -15,7 +15,7 @@ import ar5 from '@assets/Screenshot_2026-02-27-03-53-46-60_2c05e4041aef5218eaa89
 import ar6 from '@assets/Screenshot_2026-02-27-03-54-05-88_2c05e4041aef5218eaa893165b90_1772162653864.jpg';
 import ar7 from '@assets/Screenshot_2026-02-27-03-54-30-50_2c05e4041aef5218eaa893165b90_1772162653885.jpg';
 
-// Static Imports for English
+// Static Imports for English (Images with no Arabic text)
 import en1 from '@assets/Screenshot_2026-02-27-03-57-56-38_2c05e4041aef5218eaa893165b90_1772162653894.jpg';
 import en2 from '@assets/Screenshot_2026-02-27-03-59-17-09_2c05e4041aef5218eaa893165b90_1772162653903.jpg';
 import en3 from '@assets/Screenshot_2026-02-27-03-59-45-31_2c05e4041aef5218eaa893165b90_1772162653918.jpg';

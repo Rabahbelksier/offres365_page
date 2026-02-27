@@ -4,12 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Download, Smartphone, Star, ChevronRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-// Mockup image - using English image 1 as a generic mockup for the hero
-import mockupImg from '@assets/Screenshot_2026-02-27-03-57-56-38_2c05e4041aef5218eaa893165b90_1772162653894.jpg';
+// Main mockup images
+import mockupAr from '@assets/IMG_20260227_043809_1772163543644.jpg';
+import mockupEn from '@assets/IMG_20260227_043728_1772163543667.jpg';
 
 export function Hero() {
   const { t, lang } = useI18n();
   const isRtl = lang === 'ar';
+  const mockupImg = isRtl ? mockupAr : mockupEn;
 
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient">
