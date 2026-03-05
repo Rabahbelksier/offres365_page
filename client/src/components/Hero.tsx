@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
-import { Download, Smartphone, Star, ChevronRight } from "lucide-react";
+import { Download, Smartphone, Star, ChevronRight, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 // Main mockup images
@@ -59,6 +59,16 @@ export function Hero() {
               >
                 <Smartphone className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
                 {t('hero.download.play')}
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
+                onClick={() => window.open('https://apkpure.com/offres-365/com.offers365.app', '_blank')}
+                data-testid="button-download-apkpure"
+              >
+                <ExternalLink className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
+                {t('hero.download.apkpure')}
               </Button>
             </div>
 

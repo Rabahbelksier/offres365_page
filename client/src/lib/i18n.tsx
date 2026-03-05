@@ -23,6 +23,7 @@ const translations = {
     'hero.dev': 'تطوير: Rabah coupons',
     'hero.download.apk': 'تحميل مباشر (APK)',
     'hero.download.play': 'Google Play',
+    'hero.download.apkpure': 'APKPure',
     
     'features.title': 'كل ما تحتاجه لتتسوق بذكاء',
     'features.subtitle': 'اكتشف كيف يمكن لتطبيق Offres 365 أن يغير طريقة تسوقك للأبد.',
@@ -89,6 +90,7 @@ const translations = {
     'hero.dev': 'Developer: Rabah coupons',
     'hero.download.apk': 'Direct Download (APK)',
     'hero.download.play': 'Google Play',
+    'hero.download.apkpure': 'APKPure',
     
     'features.title': 'Everything you need to shop smarter',
     'features.subtitle': 'Discover how Offres 365 can change the way you shop forever.',
