@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useCreateContact } from "@/hooks/use-contacts";
 import { useState } from "react";
 import { Send } from "lucide-react";
+import appIcon from "@assets/icon_1772163543674.png";
 
 export function Contact() {
   const { t, lang } = useI18n();
@@ -48,9 +49,7 @@ export function Contact() {
 
             <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl">
-                  O
-                </div>
+                <img src={appIcon} alt="Offres 365" className="w-12 h-12 rounded-full object-cover" />
                 <div>
                   <h4 className="font-bold text-lg">Offres 365</h4>
                   <p className="text-muted-foreground">Rabah coupons</p>
