@@ -55,7 +55,7 @@ export function Hero() {
                 size="lg" 
                 variant="outline"
                 className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
-                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.miniclip.offres365', '_blank')}
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.offers365.app', '_blank')}
               >
                 <Smartphone className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
                 {t('hero.download.play')}
