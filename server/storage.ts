@@ -1,8 +1,11 @@
 import { db } from "./db";
-import { messageUsers, type MessageUser, type InsertMessage } from "@shared/schema";
+import { messageUsers, users, type MessageUser, type InsertMessage, type User } from "@shared/schema";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   createMessage(message: InsertMessage): Promise<MessageUser>;
+  getUserByEmail(email: string): Promise<User | undefined>;
+  deleteUser(id: number): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -12,6 +15,15 @@ export class DatabaseStorage implements IStorage {
       .values(insertMessage)
       .returning();
     return message;
+  }
+
+  async getUserByEmail(email: string): Promise<User | undefined> {
+    const [user] = await db.select().from(users).where(eq(users.email, email));
+    return user;
+  }
+
+  async deleteUser(id: number): Promise<void> {
+    await db.delete(users).where(eq(users.id, id));
   }
 }
 
