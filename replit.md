@@ -13,7 +13,7 @@ A full-stack web application built with Express (backend) and React/Vite (fronte
 The project uses **two database connections**:
 
 1. **Helium (Replit) DB** (`DATABASE_URL`): Used for the `message_users` table (contact form messages). Managed via `server/db.ts`.
-2. **Supabase DB** (`SUPABASE_DATABASE_URL`): Used for the `users` table (user accounts). Managed via `server/supabaseDb.ts`.
+2. **Supabase DB** (`DATABASE_URL`): Used for the `users` table (user accounts). Managed via `server/supabaseDb.ts`.
 
 ### Tables
 - `users` (Supabase): id, email, password, first_name, last_name, country
@@ -27,4 +27,4 @@ The project uses **two database connections**:
 ## Environment Variables
 
 - `DATABASE_URL`: Replit Helium database connection string (runtime-managed)
-- `SUPABASE_DATABASE_URL`: Supabase database connection string for user operations
+- `DATABASE_URL`: Supabase database connection string for user operations

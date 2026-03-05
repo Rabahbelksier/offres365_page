@@ -41,4 +41,4 @@ waitForPort = 5000
 [userenv]
 
 [userenv.shared]
-SUPABASE_DATABASE_URL = "postgresql://postgres.ixripyocribqiytxrdoi:rabahbelksier06651024221997@aws-1-eu-west-1.pooler.supabase.com:5432/postgres"
+DATABASE_URL = "postgresql://postgres.ixripyocribqiytxrdoi:rabahbelksier06651024221997@aws-1-eu-west-1.pooler.supabase.com:5432/postgres"
