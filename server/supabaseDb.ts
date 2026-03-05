@@ -1,16 +1,25 @@
-import { drizzle } from "drizzle-orm/node-postgres";
+import { drizzle, NodePgDatabase } from "drizzle-orm/node-postgres";
 import pg from "pg";
 import * as schema from "@shared/schema";
 
 const { Pool } = pg;
 
-if (!process.env.SUPABASE_DATABASE_URL) {
-  throw new Error("SUPABASE_DATABASE_URL must be set for user operations.");
+let supabasePool: pg.Pool | null = null;
+let supabaseDbInstance: NodePgDatabase<typeof schema> | null = null;
+
+function getSupabaseDb(): NodePgDatabase<typeof schema> {
+  if (!supabaseDbInstance) {
+    const connectionString = process.env.SUPABASE_DATABASE_URL;
+    if (!connectionString) {
+      throw new Error("SUPABASE_DATABASE_URL must be set for user operations.");
+    }
+    supabasePool = new Pool({
+      connectionString,
+      ssl: { rejectUnauthorized: false },
+    });
+    supabaseDbInstance = drizzle(supabasePool, { schema });
+  }
+  return supabaseDbInstance;
 }
 
-export const supabasePool = new Pool({
-  connectionString: process.env.SUPABASE_DATABASE_URL,
-  ssl: { rejectUnauthorized: false },
-});
-
-export const supabaseDb = drizzle(supabasePool, { schema });
+export { getSupabaseDb, supabasePool };

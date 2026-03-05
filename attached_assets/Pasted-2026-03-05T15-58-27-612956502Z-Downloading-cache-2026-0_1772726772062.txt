@@ -1,0 +1,73 @@
+2026-03-05T15:58:27.612956502Z ==> Downloading cache...
+2026-03-05T15:58:27.662293205Z ==> Cloning from https://github.com/Rabahbelksier/offres365_page
+2026-03-05T15:58:29.49621058Z ==> Checking out commit 58cdfa44efd5c95e7d7a03dc65e1f333cb6e52b7 in branch main
+2026-03-05T15:58:41.654606852Z ==> Downloaded 199MB in 2s. Extraction took 11s.
+2026-03-05T15:59:34.393954563Z ==> Using Node.js version 22.22.0 (default)
+2026-03-05T15:59:34.438844258Z ==> Docs on specifying a Node.js version: https://render.com/docs/node-version
+2026-03-05T15:59:34.760168548Z ==> Running build command 'npm install; npm run build'...
+2026-03-05T15:59:36.475261988Z 
+2026-03-05T15:59:36.475303189Z up to date, audited 479 packages in 2s
+2026-03-05T15:59:36.47532052Z 
+2026-03-05T15:59:36.47532632Z 76 packages are looking for funding
+2026-03-05T15:59:36.47533175Z   run `npm fund` for details
+2026-03-05T15:59:36.498808722Z 
+2026-03-05T15:59:36.498829423Z 4 vulnerabilities (1 low, 1 moderate, 2 high)
+2026-03-05T15:59:36.498833863Z 
+2026-03-05T15:59:36.498839693Z To address all issues, run:
+2026-03-05T15:59:36.498844403Z   npm audit fix
+2026-03-05T15:59:36.498848913Z 
+2026-03-05T15:59:36.498853243Z Run `npm audit` for details.
+2026-03-05T15:59:36.705116026Z 
+2026-03-05T15:59:36.705135707Z > rest-express@1.0.0 build
+2026-03-05T15:59:36.705140167Z > tsx script/build.ts
+2026-03-05T15:59:36.705143457Z 
+2026-03-05T15:59:38.114434269Z building client...
+2026-03-05T15:59:38.275752665Z vite v7.3.0 building client environment for production...
+2026-03-05T15:59:39.203820445Z transforming...
+2026-03-05T15:59:45.071047577Z ✓ 2080 modules transformed.
+2026-03-05T15:59:45.824990425Z rendering chunks...
+2026-03-05T15:59:45.853348695Z computing gzip size...
+2026-03-05T15:59:45.872539344Z ../dist/public/index.html                                                                                            2.01 kB │ gzip:   0.77 kB
+2026-03-05T15:59:45.873026666Z ../dist/public/assets/Screenshot_2026-02-27-03-54-05-88_2c05e4041aef5218eaa893165b90_1772162653864-BPDcawLA.jpg    238.56 kB
+2026-03-05T15:59:45.873040067Z ../dist/public/assets/Screenshot_2026-02-27-04-00-49-83_2c05e4041aef5218eaa893165b90_1772162653951-CsJ7IuU7.jpg    255.85 kB
+2026-03-05T15:59:45.873044767Z ../dist/public/assets/Screenshot_2026-02-27-03-54-30-50_2c05e4041aef5218eaa893165b90_1772162653885-s-VC81i0.jpg    283.91 kB
+2026-03-05T15:59:45.873049007Z ../dist/public/assets/Screenshot_2026-02-27-04-01-04-98_2c05e4041aef5218eaa893165b90_1772162653963-CJCmbXHS.jpg    310.96 kB
+2026-03-05T15:59:45.873053067Z ../dist/public/assets/Screenshot_2026-02-27-03-53-46-60_2c05e4041aef5218eaa893165b90_1772162653851-B8dIrLfl.jpg    388.56 kB
+2026-03-05T15:59:45.873057277Z ../dist/public/assets/Screenshot_2026-02-27-04-00-16-52_2c05e4041aef5218eaa893165b90_1772162653939-DLuLVGmn.jpg    433.66 kB
+2026-03-05T15:59:45.873061447Z ../dist/public/assets/Screenshot_2026-02-27-03-52-17-25_2c05e4041aef5218eaa893165b90_1772162653777-hI3hRRuX.jpg    471.48 kB
+2026-03-05T15:59:45.873065817Z ../dist/public/assets/IMG_20260227_043728_1772163543667-DyxF721Z.jpg                                               558.10 kB
+2026-03-05T15:59:45.873069967Z ../dist/public/assets/IMG_20260227_043809_1772163543644-BN93FWeR.jpg                                               560.74 kB
+2026-03-05T15:59:45.873074137Z ../dist/public/assets/Screenshot_2026-02-27-03-59-45-31_2c05e4041aef5218eaa893165b90_1772162653918-B6iwpX5I.jpg    571.27 kB
+2026-03-05T15:59:45.873096488Z ../dist/public/assets/Screenshot_2026-02-27-03-53-22-98_2c05e4041aef5218eaa893165b90_1772162653786-Bgm3AB9b.jpg    587.01 kB
+2026-03-05T15:59:45.873121368Z ../dist/public/assets/Screenshot_2026-02-27-03-51-20-14_2c05e4041aef5218eaa893165b90_1772162653754-Dt1HWvzC.jpg    672.80 kB
+2026-03-05T15:59:45.873124529Z ../dist/public/assets/Screenshot_2026-02-27-03-57-56-38_2c05e4041aef5218eaa893165b90_1772162653894-DjAA6vGF.jpg    681.91 kB
+2026-03-05T15:59:45.873127489Z ../dist/public/assets/Screenshot_2026-02-27-03-59-17-09_2c05e4041aef5218eaa893165b90_1772162653903-BtXGXBHs.jpg    763.16 kB
+2026-03-05T15:59:45.873130518Z ../dist/public/assets/icon_1772163543674-CZYN-y3b.png                                                              774.08 kB
+2026-03-05T15:59:45.873144719Z ../dist/public/assets/Screenshot_2026-02-27-04-00-09-07_2c05e4041aef5218eaa893165b90_1772162653928-CqKMEkJ9.jpg    857.81 kB
+2026-03-05T15:59:45.873147939Z ../dist/public/assets/Screenshot_2026-02-27-03-53-38-56_2c05e4041aef5218eaa893165b90_1772162653810-B1YEfoc-.jpg  1,004.44 kB
+2026-03-05T15:59:45.873288182Z ../dist/public/assets/index-CqVzYhvG.css                                                                            91.70 kB │ gzip:  14.45 kB
+2026-03-05T15:59:45.873312343Z ../dist/public/assets/index-xh1n05X_.js                                                                            549.56 kB │ gzip: 177.85 kB
+2026-03-05T15:59:45.873438876Z 
+2026-03-05T15:59:45.873446176Z (!) Some chunks are larger than 500 kB after minification. Consider:
+2026-03-05T15:59:45.873449776Z - Using dynamic import() to code-split the application
+2026-03-05T15:59:45.873452896Z - Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-03-05T15:59:45.873456016Z - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-03-05T15:59:45.873822475Z ✓ built in 7.41s
+2026-03-05T15:59:45.873962938Z building server...
+2026-03-05T15:59:46.199230143Z 
+2026-03-05T15:59:46.199260864Z   dist/index.cjs  1.0mb ⚠️
+2026-03-05T15:59:46.199264344Z 
+2026-03-05T15:59:46.199267914Z ⚡ Done in 299ms
+2026-03-05T15:59:53.547290813Z ==> Uploading build...
+2026-03-05T16:00:04.408368231Z ==> Uploaded in 6.1s. Compression took 4.8s
+2026-03-05T16:00:04.457589091Z ==> Build successful 🎉
+2026-03-05T16:00:15.652992404Z ==> Deploying...
+2026-03-05T16:00:15.943887043Z ==> Setting WEB_CONCURRENCY=1 by default, based on available CPUs in the instance
+2026-03-05T16:02:41.441260655Z ==> Running 'npm run start'
+2026-03-05T16:02:42.542494733Z 
+2026-03-05T16:02:42.542521543Z > rest-express@1.0.0 start
+2026-03-05T16:02:42.542526093Z > NODE_ENV=production node dist/index.cjs
+2026-03-05T16:02:42.542528453Z 
+2026-03-05T16:02:43.435803592Z /opt/render/project/src/dist/index.cjs:74
+2026-03-05T16:02:49.033988765Z ==> Exited with status 1
+2026-03-05T16:02:49.036851428Z ==> Common ways to troubleshoot your deploy: https://render.com/docs/troubleshooting-deploys

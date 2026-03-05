@@ -1,5 +1,5 @@
 import { db } from "./db";
-import { supabaseDb } from "./supabaseDb";
+import { getSupabaseDb } from "./supabaseDb";
 import { messageUsers, users, type MessageUser, type InsertMessage, type User } from "@shared/schema";
 import { eq } from "drizzle-orm";
 
@@ -19,12 +19,12 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getUserByEmail(email: string): Promise<User | undefined> {
-    const [user] = await supabaseDb.select().from(users).where(eq(users.email, email));
+    const [user] = await getSupabaseDb().select().from(users).where(eq(users.email, email));
     return user;
   }
 
   async deleteUser(id: number): Promise<void> {
-    await supabaseDb.delete(users).where(eq(users.id, id));
+    await getSupabaseDb().delete(users).where(eq(users.id, id));
   }
 }
 
