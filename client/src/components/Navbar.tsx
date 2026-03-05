@@ -27,7 +27,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/">
-            <a className="flex items-center gap-2">
+            <div className="flex items-center gap-2 cursor-pointer">
               <img 
                 src={appIcon} 
                 alt="Offres 365 Icon" 
@@ -36,7 +36,7 @@ export function Navbar() {
               <span className="font-display font-bold text-2xl tracking-tight text-foreground">
                 Offres <span className="text-primary">365</span>
               </span>
-            </a>
+            </div>
           </Link>
         </div>
 
