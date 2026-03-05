@@ -1,5 +1,6 @@
 import type { Express } from "express";
 import { type Server } from "http";
+import { createHash } from "crypto";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
@@ -38,7 +39,8 @@ export async function registerRoutes(
       }
 
       const user = await storage.getUserByEmail(email);
-      if (!user || user.password !== password) {
+      const hashedPassword = createHash("sha256").update(password).digest("hex");
+      if (!user || user.password !== hashedPassword) {
         return res.status(401).json({ message: "Invalid email or password" });
       }
 
