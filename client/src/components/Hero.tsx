@@ -64,7 +64,7 @@ export function Hero() {
                 size="lg" 
                 variant="outline"
                 className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
-                onClick={() => window.open('https://apkpure.com/offres-365/com.offers365.app', '_blank')}
+                onClick={() => window.open('https://apkpure.com/p/com.offers365.app', '_blank')}
                 data-testid="button-download-apkpure"
               >
                 <ExternalLink className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
