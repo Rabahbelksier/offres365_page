@@ -46,7 +46,7 @@ export function Hero() {
               <Button 
                 size="lg" 
                 className="w-full sm:w-auto h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 transition-all hover:shadow-primary/40 hover:-translate-y-1 text-lg group"
-                onClick={() => window.open('https://drive.usercontent.google.com/download?id=10zJJ91wco5AK4oINwHyphpNrbLSa0trk&export=download&confirm=t&uuid=71fb45f8-8f7d-4c51-b26a-b2b35a17a97b', '_blank')}
+                onClick={() => window.open('https://drive.usercontent.google.com/download?id=1NrNg0n1WnakrDZB-vCzO-C6W34fQsB4F&export=download&authuser=0', '_blank')}
               >
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5`} />
                 {t('hero.download.apk')}
