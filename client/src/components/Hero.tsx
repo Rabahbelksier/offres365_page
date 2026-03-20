@@ -46,7 +46,7 @@ export function Hero() {
               <Button 
                 size="lg" 
                 className="w-full sm:w-auto h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 transition-all hover:shadow-primary/40 hover:-translate-y-1 text-lg group"
-                onClick={() => window.open('https://drive.usercontent.google.com/download?id=1caXEdMaTrTvwFjCENxkUK7aJhTjYH3tr&export=download&authuser=0', '_blank')}
+                onClick={() => window.open('https://drive.usercontent.google.com/download?id=1_oFiZH8KlHMPi0r5sQLMQQQXqHUGsP5O&export=download&authuser=0', '_blank')}
               >
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5`} />
                 {t('hero.download.apk')}
@@ -64,7 +64,7 @@ export function Hero() {
                 size="lg" 
                 variant="outline"
                 className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
-                onClick={() => window.open('https://drive.usercontent.google.com/download?id=1caXEdMaTrTvwFjCENxkUK7aJhTjYH3tr&export=download&authuser=0', '_blank')}
+                onClick={() => window.open('https://apkpure.com/p/com.offers365.app', '_blank')}
                 data-testid="button-download-apkpure"
               >
                 <ExternalLink className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
