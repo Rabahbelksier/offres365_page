@@ -82,10 +82,10 @@ const translations = {
     'delete.error': 'Error deleting account',
     'password': 'Password',
     
-    'hero.badge': 'Version 1.0.0 Available Now',
+    'hero.badge': 'Version 1.0.3 Available Now',
     'hero.title': 'The Best Deals & Prices with One Click',
     'hero.subtitle': 'An app that helps you get the best possible price for any product on AliExpress with just one click. \n Copy the product link, paste it into the app, and enjoy the best discounts. Get regular updates on trending deals and coupons. \n Download the app and start saving money!',
-    'hero.size': 'Size: 87.7 Mo',
+    'hero.size': 'Size: 38 Mo',
     'hero.android': 'Supports Android',
     'hero.dev': 'Developer: Rabah coupons',
     'hero.download.apk': 'Direct Download (APK)',
