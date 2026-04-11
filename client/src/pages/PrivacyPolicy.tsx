@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
       section9Text: "نحتفظ بالحق في تحديث هذه السياسة في أي وقت. سيتم إخطارك بأي تغييرات جوهرية من خلال إشعارات داخل التطبيق. استمرار استخدامك للتطبيق بعد التحديث يعني موافقتك على النسخة المعدلة.",
       contact: "التواصل معنا",
       contactEmail: "📧 البريد الإلكتروني: offres365contact@gmail.com",
-      contactWeb: "🌐 الموقع الإلكتروني: https://offres365_page.up.railway.app"
+      contactWeb: "🌐 الموقع الإلكتروني: https://offres365page.up.railway.app"
     },
     en: {
       title: "Privacy Policy",
@@ -129,7 +129,7 @@ export default function PrivacyPolicy() {
       section9Text: "We reserve the right to update this policy at any time. You will be notified of any material changes through in-app notifications. Your continued use of the app after the update means your consent to the modified version.",
       contact: "Contact Us",
       contactEmail: "📧 Email: offres365contact@gmail.com",
-      contactWeb: "🌐 Website: https://offres365_page.up.railway.app"
+      contactWeb: "🌐 Website: https://offres365page.up.railway.app"
     }
   };
 
