@@ -51,7 +51,7 @@ export function Hero() {
 
                 
                 
-                onClick={() => window.open('https://drive.usercontent.google.com/download?id=1_oFiZH8KlHMPi0r5sQLMQQQXqHUGsP5O&export=download&authuser=0', '_blank')}
+                onClick={() => window.open('https://drive.usercontent.google.com/download?id=1NPVMMFFSzwSdAdDt2lVcey0KuvsB0G04&export=download&authuser=0', '_blank')}
               >
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5`} />
                 {t('hero.download.apk')}
