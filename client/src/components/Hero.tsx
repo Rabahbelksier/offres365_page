@@ -79,7 +79,7 @@ export function Hero() {
                 
 
                 
-                onClick={() => window.open('https://apkpure.com/p/com.offers365.app', '_blank')}
+                onClick={() => window.open('https://apkpure.com/offres-365-outil-alideals/com.offers365.app/download/1.0.4', '_blank')}
                 data-testid="button-download-apkpure"
               >
                 <ExternalLink className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
