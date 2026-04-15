@@ -36,7 +36,7 @@ function AliAffiliateHero() {
           >
             <Badge variant="secondary" className="mb-6 px-4 py-1.5 rounded-full bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
               <BarChart2 className="w-3.5 h-3.5 mr-2 inline-block" />
-              {isRtl ? 'تطبيق AliExpress Affiliate' : 'AliExpress Affiliate App'}
+              {isRtl ? 'الإصدار 1.0.0 متاح الآن' : 'Version 1.0.0 is now available'}
             </Badge>
             
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight text-foreground leading-[1.1] mb-6">
@@ -66,7 +66,7 @@ function AliAffiliateHero() {
                 size="lg" 
                 className="w-full sm:w-auto h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 transition-all hover:shadow-primary/40 hover:-translate-y-1 text-lg group"
                 data-testid="button-ali-download-google-play"
-                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.rabah.aliaffiliate', '_blank')}
+                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.aliaffiliate.app', '_blank')}
               >
                 <Smartphone className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5`} />
                 Google Play
@@ -76,7 +76,7 @@ function AliAffiliateHero() {
                 variant="outline"
                 className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
                 data-testid="button-ali-download-apk"
-                onClick={() => window.open('https://play.google.com/store/apps/details?id=com.rabah.aliaffiliate', '_blank')}
+                onClick={() => window.open('https://drive.usercontent.google.com/download?id=15ZguRilnoyU0Zh4IsUZyCJf_RCJCYGwz&export=download&authuser=0', '_blank')}
               >
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
                 {isRtl ? 'تحميل مباشر (APK)' : 'Direct Download (APK)'}
@@ -86,7 +86,7 @@ function AliAffiliateHero() {
                 variant="outline"
                 className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
                 data-testid="button-ali-download-apkpure"
-                onClick={() => window.open('https://apkpure.com/ali-affiliate/com.rabah.aliaffiliate', '_blank')}
+                onClick={() => window.open('https://apkpure.com/p/com.aliaffiliate.app', '_blank')}
               >
                 <ExternalLink className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
                 APKPure
