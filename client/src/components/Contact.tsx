@@ -6,9 +6,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { useCreateContact } from "@/hooks/use-contacts";
 import { useState } from "react";
 import { Send } from "lucide-react";
-import appIcon from "@assets/icon_1772163543674.png";
 
-export function Contact() {
+interface ContactProps {
+  appName: string;
+  appIcon: string;
+  appTagline?: string;
+}
+
+export function Contact({ appName, appIcon, appTagline }: ContactProps) {
   const { t, lang } = useI18n();
   const isRtl = lang === 'ar';
   const mutation = useCreateContact();
@@ -17,7 +22,7 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    mutation.mutate(formData, {
+    mutation.mutate({ ...formData, app: appName }, {
       onSuccess: () => {
         setFormData({ name: '', email: '', message: '' });
       }
@@ -49,10 +54,10 @@ export function Contact() {
 
             <div className="bg-primary/5 border border-primary/20 rounded-2xl p-8">
               <div className="flex items-center gap-4 mb-4">
-                <img src={appIcon} alt="Offres 365" className="w-12 h-12 rounded-full object-cover" />
+                <img src={appIcon} alt={appName} className="w-12 h-12 rounded-full object-cover" />
                 <div>
-                  <h4 className="font-bold text-lg">Offres 365</h4>
-                  <p className="text-muted-foreground">Rabah coupons</p>
+                  <h4 className="font-bold text-lg">{appName}</h4>
+                  {appTagline && <p className="text-muted-foreground">{appTagline}</p>}
                 </div>
               </div>
             </div>
@@ -75,6 +80,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
+                    data-testid="input-contact-name"
                     className="h-14 rounded-xl bg-secondary/50 border-border focus-visible:ring-primary"
                   />
                 </div>
@@ -88,6 +94,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
+                    data-testid="input-contact-email"
                     className="h-14 rounded-xl bg-secondary/50 border-border focus-visible:ring-primary"
                   />
                 </div>
@@ -101,6 +108,7 @@ export function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    data-testid="input-contact-message"
                     className="resize-none rounded-xl bg-secondary/50 border-border focus-visible:ring-primary py-4"
                   />
                 </div>
@@ -109,6 +117,7 @@ export function Contact() {
                   type="submit" 
                   size="lg" 
                   disabled={mutation.isPending}
+                  data-testid="button-contact-submit"
                   className="w-full h-14 rounded-xl bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/25 transition-all text-lg group mt-4"
                 >
                   {mutation.isPending ? t('contact.submitting') : (

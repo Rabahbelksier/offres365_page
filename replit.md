@@ -1,6 +1,6 @@
 # Project Overview
 
-A full-stack web application built with Express (backend) and React/Vite (frontend).
+A full-stack web application built with Express (backend) and React/Vite (frontend). This is a multi-app landing page supporting two apps: **Offres 365** and **Ali Affiliate**.
 
 ## Architecture
 
@@ -10,21 +10,33 @@ A full-stack web application built with Express (backend) and React/Vite (fronte
 
 ## Database Setup
 
-The project uses **two database connections**:
-
-1. **Helium (Replit) DB** (`DATABASE_URL`): Used for the `message_users` table (contact form messages). Managed via `server/db.ts`.
-2. **Supabase DB** (`DATABASE_URL`): Used for the `users` table (user accounts). Managed via `server/supabaseDb.ts`.
+The project uses a single PostgreSQL database (`DATABASE_URL`).
 
 ### Tables
-- `users` (Supabase): id, email, password, first_name, last_name, country
-- `message_users` (Helium): id, name, email, messages, created_at
+- `users`: id, email, password, first_name, last_name, country
+- `message_users`: id, name, email, messages, app, created_at
+
+The `app` column in `message_users` stores which app (Offres 365 or Ali Affiliate) the contact message was sent from.
 
 ## Key Features
 
-- **Contact Form**: POST `/api/contacts` - stores messages in Helium DB
-- **Delete Account**: POST `/api/delete-account` - verifies email/password against Supabase DB and deletes the user
+- **Contact Form**: POST `/api/contacts` - stores messages in DB with app name identifier
+- **Delete Account**: POST `/api/delete-account` - verifies email/password and deletes the user
+
+## Pages & Routes
+
+- `/` → Offres 365 home page
+- `/privacy-policy` → Offres 365 privacy policy
+- `/delete-account` → Account deletion page (Offres 365 only)
+- `/ali-affiliate` → Ali Affiliate app landing page
+- `/ali-affiliate/privacy-policy` → Ali Affiliate privacy policy
+
+## Components
+
+- `Navbar` – Route-aware: shows Ali Affiliate branding on `/ali-affiliate*` routes, hides "Delete Account" on Ali Affiliate pages, shows "All Apps" section in sidebar
+- `Contact` – Accepts `appName`, `appIcon`, `appTagline` props to be reused across both apps
+- All other components (Hero, Features, Gallery, Footer) remain specific to Offres 365; Ali Affiliate has its own inline components in `AliAffiliate.tsx`
 
 ## Environment Variables
 
-- `DATABASE_URL`: Replit Helium database connection string (runtime-managed)
-- `DATABASE_URL`: Supabase database connection string for user operations
+- `DATABASE_URL`: PostgreSQL database connection string

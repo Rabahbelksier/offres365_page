@@ -9,6 +9,8 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 import DeleteAccount from "@/pages/DeleteAccount";
+import AliAffiliate from "@/pages/AliAffiliate";
+import AliAffiliatePrivacyPolicy from "@/pages/AliAffiliatePrivacyPolicy";
 
 function Router() {
   return (
@@ -16,6 +18,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/privacy-policy" component={PrivacyPolicy} />
       <Route path="/delete-account" component={DeleteAccount} />
+      <Route path="/ali-affiliate" component={AliAffiliate} />
+      <Route path="/ali-affiliate/privacy-policy" component={AliAffiliatePrivacyPolicy} />
       <Route component={NotFound} />
     </Switch>
   );

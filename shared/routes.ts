@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { insertMessageSchema, messageUsers } from './schema';
+import { messageUsers } from './schema';
 
 export const errorSchemas = {
   validation: z.object({
@@ -20,6 +20,7 @@ export const api = {
         name: z.string(),
         email: z.string().email(),
         message: z.string(),
+        app: z.string().default("Offres 365"),
       }),
       responses: {
         201: z.custom<typeof messageUsers.$inferSelect>(),

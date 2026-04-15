@@ -20,6 +20,7 @@ export const messageUsers = pgTable("message_users", {
   name: text("name").notNull(),
   email: text("email").notNull(),
   messages: text("messages").notNull(),
+  app: text("app").notNull().default("Offres 365"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
