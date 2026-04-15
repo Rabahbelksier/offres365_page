@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/components/theme-provider";
-import { Moon, Sun, Globe, Menu, Shield, UserMinus, LayoutGrid, ChevronRight } from "lucide-react";
+import { Moon, Sun, Globe, Menu, Shield, UserMinus, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import offresIcon from "@assets/icon_1772163543674.png";
 import aliIcon from "@assets/icon_1776260788092.png";
@@ -82,6 +82,38 @@ export function Navbar() {
               
               <div className="flex flex-col gap-6">
                 <div className="space-y-4">
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
+                    {lang === 'ar' ? 'اختر تطبيقك' : 'Choose Your App'}
+                  </h3>
+                  <div className="flex flex-col gap-2">
+                    <Link href="/">
+                      <Button
+                        variant={!isAliAffiliate ? "secondary" : "ghost"}
+                        className="justify-start gap-3 h-12 rounded-xl w-full"
+                        onClick={() => setIsOpen(false)}
+                        data-testid="link-app-offres365"
+                      >
+                        <img src={offresIcon} alt="Offres 365" className="w-6 h-6 rounded-lg object-contain" />
+                        <span>Offres 365</span>
+                        <ChevronRight className="w-4 h-4 ml-auto opacity-50" />
+                      </Button>
+                    </Link>
+                    <Link href="/ali-affiliate">
+                      <Button
+                        variant={isAliAffiliate ? "secondary" : "ghost"}
+                        className="justify-start gap-3 h-12 rounded-xl w-full"
+                        onClick={() => setIsOpen(false)}
+                        data-testid="link-app-ali-affiliate"
+                      >
+                        <img src={aliIcon} alt="Ali Affiliate" className="w-6 h-6 rounded-lg object-contain" />
+                        <span>Ali Affiliate</span>
+                        <ChevronRight className="w-4 h-4 ml-auto opacity-50" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
                   <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">{t('nav.appearance')}</h3>
                   <div className="flex flex-col gap-2">
                     <Button 
@@ -116,38 +148,6 @@ export function Navbar() {
                     <Globe className="w-5 h-5" />
                     <span>{lang === 'ar' ? 'English' : 'العربية'}</span>
                   </Button>
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-                    {lang === 'ar' ? 'كل التطبيقات' : 'All Apps'}
-                  </h3>
-                  <div className="flex flex-col gap-2">
-                    <Link href="/">
-                      <Button
-                        variant={!isAliAffiliate ? "secondary" : "ghost"}
-                        className="justify-start gap-3 h-12 rounded-xl w-full"
-                        onClick={() => setIsOpen(false)}
-                        data-testid="link-app-offres365"
-                      >
-                        <img src={offresIcon} alt="Offres 365" className="w-6 h-6 rounded-lg object-contain" />
-                        <span>Offres 365</span>
-                        <ChevronRight className="w-4 h-4 ml-auto opacity-50" />
-                      </Button>
-                    </Link>
-                    <Link href="/ali-affiliate">
-                      <Button
-                        variant={isAliAffiliate ? "secondary" : "ghost"}
-                        className="justify-start gap-3 h-12 rounded-xl w-full"
-                        onClick={() => setIsOpen(false)}
-                        data-testid="link-app-ali-affiliate"
-                      >
-                        <img src={aliIcon} alt="Ali Affiliate" className="w-6 h-6 rounded-lg object-contain" />
-                        <span>Ali Affiliate</span>
-                        <ChevronRight className="w-4 h-4 ml-auto opacity-50" />
-                      </Button>
-                    </Link>
-                  </div>
                 </div>
 
                 <div className="space-y-4">
