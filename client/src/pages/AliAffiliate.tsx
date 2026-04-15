@@ -76,7 +76,7 @@ function AliAffiliateHero() {
                 variant="outline"
                 className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
                 data-testid="button-ali-download-apk"
-                onClick={() => window.open('https://drive.usercontent.google.com/download?id=15ZguRilnoyU0Zh4IsUZyCJf_RCJCYGwz&export=download&authuser=0', '_blank')}
+                onClick={() => window.open('https://raw.githubusercontent.com/Rabahbelksier/File_app/main/Ali%20Affiliate%20V1.0.0.apk?raw=true', '_blank')}
               >
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
                 {isRtl ? 'تحميل مباشر (APK)' : 'Direct Download (APK)'}
