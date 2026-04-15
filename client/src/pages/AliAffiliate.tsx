@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Download, Smartphone, BarChart2, Link, ShoppingBag, Settings, ChevronLeft, ChevronRight } from "lucide-react";
+import { Download, Smartphone, BarChart2, Link, ShoppingBag, Settings, ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import { useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
@@ -26,12 +26,12 @@ function AliAffiliateHero() {
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className={`flex flex-col lg:flex-row items-center gap-16 lg:gap-8 ${isRtl ? 'lg:flex-row-reverse' : ''}`}>
+        <div className="flex flex-col items-center text-center">
           
           <motion.div 
-            className="flex-1 text-center lg:text-start"
-            initial={{ opacity: 0, x: isRtl ? 50 : -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            className="w-full max-w-4xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <Badge variant="secondary" className="mb-6 px-4 py-1.5 rounded-full bg-primary/10 text-primary border-primary/20 hover:bg-primary/20 transition-colors">
@@ -61,7 +61,7 @@ function AliAffiliateHero() {
                 : 'A complete dashboard for AliExpress Affiliate members. Track your earnings, monitor orders, and generate affiliate links effortlessly from your phone.'}
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
               <Button 
                 size="lg" 
                 className="w-full sm:w-auto h-14 px-8 rounded-full bg-primary hover:bg-primary/90 text-white shadow-xl shadow-primary/25 transition-all hover:shadow-primary/40 hover:-translate-y-1 text-lg group"
@@ -81,9 +81,19 @@ function AliAffiliateHero() {
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
                 {isRtl ? 'تحميل مباشر (APK)' : 'Direct Download (APK)'}
               </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="w-full sm:w-auto h-14 px-8 rounded-full border-2 hover:bg-secondary transition-all hover:-translate-y-1 text-lg group"
+                data-testid="button-ali-download-apkpure"
+                onClick={() => window.open('https://apkpure.com/ali-affiliate/com.rabah.aliaffiliate', '_blank')}
+              >
+                <ExternalLink className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
+                APKPure
+              </Button>
             </div>
 
-            <div className="flex items-center justify-center lg:justify-start gap-6 text-sm text-muted-foreground font-medium">
+            <div className="flex items-center justify-center gap-6 text-sm text-muted-foreground font-medium">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
                 {isRtl ? 'مجاني تماماً' : '100% Free'}
@@ -95,24 +105,6 @@ function AliAffiliateHero() {
               <div className="flex items-center gap-2">
                 <BarChart2 className="w-4 h-4 text-yellow-500" />
                 {isRtl ? 'تطوير: Rabah coupons' : 'Dev: Rabah coupons'}
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div 
-            className="flex-1 w-full max-w-sm lg:max-w-md xl:max-w-lg"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          >
-            <div className="relative mx-auto w-[280px] sm:w-[320px]">
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-primary/30 to-accent/30 rounded-full blur-3xl -z-10"></div>
-              <div className="device-mockup relative z-10 aspect-[9/19]">
-                <img 
-                  src={screen1} 
-                  alt="Ali Affiliate App Dashboard" 
-                  className="w-full h-full object-cover"
-                />
               </div>
             </div>
           </motion.div>
