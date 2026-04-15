@@ -4,14 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Download, Smartphone, Star, ChevronRight, ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-// Main mockup images
-import mockupAr from '@assets/IMG_20260227_043809_1772163543644.jpg';
-import mockupEn from '@assets/IMG_20260227_043728_1772163543667.jpg';
+import featureBanner from '@assets/1000102621_1776265752452.png';
 
 export function Hero() {
   const { t, lang } = useI18n();
   const isRtl = lang === 'ar';
-  const mockupImg = isRtl ? mockupAr : mockupEn;
 
   return (
     <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient">
@@ -103,24 +100,19 @@ export function Hero() {
             </div>
           </motion.div>
 
-          {/* Mockup */}
-          <motion.div 
-            className="flex-1 w-full max-w-sm lg:max-w-md xl:max-w-lg perspective-1000"
-            initial={{ opacity: 0, scale: 0.8, rotateY: isRtl ? -15 : 15 }}
-            animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+          {/* Feature Banner */}
+          <motion.div
+            className="flex-1 w-full"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <div className="relative mx-auto w-[280px] sm:w-[320px]">
-              {/* Decorative background blobs */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-primary/30 to-accent/30 rounded-full blur-3xl -z-10"></div>
-              
-              <div className="device-mockup relative z-10 aspect-[9/19]">
-                <img 
-                  src={mockupImg} 
-                  alt="App interface mockup" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+            <div className="rounded-3xl overflow-hidden premium-shadow border border-border/50">
+              <img
+                src={featureBanner}
+                alt="Offres 365 Feature"
+                className="w-full h-auto object-cover"
+              />
             </div>
           </motion.div>
 
