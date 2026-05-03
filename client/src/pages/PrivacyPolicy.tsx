@@ -24,7 +24,8 @@ export default function PrivacyPolicy() {
       section1List2: [
         "بيانات استخدام التطبيق (الصفحات التي تزورها، الميزات المستخدمة)",
         "معلومات الجهاز (نوع الجهاز، نظام التشغيل)",
-        "عنوان IP لأغراض أمنية وتقنية"
+        "عنوان IP لأغراض أمنية وتقنية",
+        "معرف الإعلانات من Google (Google Advertising ID - AD_ID) لأغراض تحليلات الإعلانات وقياس أداء الحملات"
       ],
       section2: "كيفية استخدام المعلومات",
       section2Text: "نستخدم المعلومات التي نجمعها للأغراض التالية:",
@@ -47,7 +48,17 @@ export default function PrivacyPolicy() {
       section4List: [
         "مع مزودي الخدمات التقنية اللازمين لتشغيل التطبيق",
         "عند وجود التزام قانوني رسمي",
-        "لاستخدام واجهة برمجة تطبيقات شركاء العروض لجلب بيانات المنتجات (دون مشاركة بياناتك الشخصية)"
+        "لاستخدام واجهة برمجة تطبيقات شركاء العروض لجلب بيانات المنتجات (دون مشاركة بياناتك الشخصية)",
+        "مع شركة Meta/Facebook كطرف ثالث مزود للخدمة، بما يشمل بيانات معرف الإعلانات (AD_ID) لأغراض التحليلات وقياس أداء الحملات الإعلانية وتقديم إعلانات مخصصة"
+      ],
+      sectionAds: "حزمة أدوات Meta (Facebook SDK) والإعلانات",
+      sectionAdsText: "يدمج تطبيق Offres 365 حزمة أدوات Meta للأعمال (Facebook SDK) لدعم الوظائف الإعلانية والتحليلية. فيما يلي تفاصيل هذا الدمج:",
+      sectionAdsList: [
+        "يقوم التطبيق بجمع معرف الإعلانات من Google (Google Advertising ID - AD_ID) وإرساله إلى شبكة Meta الإعلانية.",
+        "يُستخدم هذا المعرف لأغراض التحليلات الإحصائية، وقياس أداء الحملات الإعلانية، وتتبع عمليات تثبيت التطبيق (App Install Tracking).",
+        "قد تُستخدم هذه البيانات لتقديم إعلانات مخصصة للمستخدمين عبر شبكة Meta الإعلانية (Meta Audience Network).",
+        "تخضع البيانات المُشاركة مع Meta لسياسة الخصوصية الخاصة بشركة Meta، والمتاحة على: https://www.facebook.com/privacy/policy",
+        "يمكن للمستخدمين إلغاء تتبع الإعلانات من خلال إعدادات الجهاز: الإعدادات ← Google ← الإعلانات ← إيقاف تخصيص الإعلانات."
       ],
       section5: "الروابط الخارجية وخدمة العروض",
       section5Text: "يستخدم التطبيق واجهات برمجة تطبيقات الشركاء لجلب بيانات المنتجات وتوليد روابط العروض. عند الضغط على أي رابط عرض، سيتم توجيهك إلى موقع خارجي يخضع لسياسة الخصوصية الخاصة به. نحن غير مسؤولين عن محتوى أو سياسات المواقع الخارجية.",
@@ -86,7 +97,8 @@ export default function PrivacyPolicy() {
       section1List2: [
         "App usage data (pages visited, features used)",
         "Device information (device type, OS)",
-        "IP address for security and technical purposes"
+        "IP address for security and technical purposes",
+        "Google Advertising ID (AD_ID) for advertising analytics and campaign performance measurement"
       ],
       section2: "How We Use Information",
       section2Text: "We use the information we collect for the following purposes:",
@@ -109,7 +121,17 @@ export default function PrivacyPolicy() {
       section4List: [
         "With technical service providers necessary for app operation",
         "When there is a formal legal obligation",
-        "To use offer partner APIs to fetch product data (without sharing your personal data)"
+        "To use offer partner APIs to fetch product data (without sharing your personal data)",
+        "With Meta/Facebook as a third-party service provider, including Advertising ID (AD_ID) data for analytics, ad campaign performance measurement, and personalized advertising"
+      ],
+      sectionAds: "Meta SDK (Facebook SDK) & Advertising",
+      sectionAdsText: "Offres 365 integrates the Meta Business SDK (Facebook SDK) to support advertising and analytics functionality. Details of this integration are as follows:",
+      sectionAdsList: [
+        "The app collects the Google Advertising ID (AD_ID) and transmits it to the Meta advertising network.",
+        "This identifier is used for statistical analytics, advertising campaign performance measurement, and App Install Tracking.",
+        "This data may be used to deliver personalized advertisements to users through the Meta Audience Network.",
+        "Data shared with Meta is subject to Meta's Privacy Policy, available at: https://www.facebook.com/privacy/policy",
+        "Users can opt out of ad tracking through device settings: Settings → Google → Ads → Opt out of Ads Personalization."
       ],
       section5: "External Links and Offer Service",
       section5Text: "The app uses partner APIs to fetch product data and generate offer links. When clicking any offer link, you will be directed to an external site subject to its own privacy policy. We are not responsible for the content or policies of external sites.",
@@ -192,6 +214,16 @@ export default function PrivacyPolicy() {
               <p className="mb-4 text-muted-foreground">{t_policy.section4Text}</p>
               <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
                 {t_policy.section4List.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </section>
+
+            <section className="bg-amber-50 dark:bg-amber-950/20 p-6 rounded-2xl border border-amber-200 dark:border-amber-800">
+              <h2 className="text-2xl font-semibold mb-4">{t_policy.sectionAds}</h2>
+              <p className="mb-4 text-muted-foreground">{t_policy.sectionAdsText}</p>
+              <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                {t_policy.sectionAdsList.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
               </ul>
