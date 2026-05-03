@@ -48,7 +48,7 @@ export function Hero() {
 
                 
                 
-                onClick={() => window.open('https://raw.githubusercontent.com/Rabahbelksier/File_app/main/offres%20365%20V1.0.5.apk?raw=true', '_blank')}
+                onClick={() => window.open('https://raw.githubusercontent.com/Rabahbelksier/File_app/main/offres%20365%20V1.0.7.apk?raw=true', '_blank')}
               >
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5`} />
                 {t('hero.download.apk')}
@@ -76,7 +76,7 @@ export function Hero() {
                 
 
                 
-                onClick={() => window.open('https://apkpure.com/offres-365-outil-alideals/com.offers365.app/download/1.0.5', '_blank')}
+                onClick={() => window.open('https://apkpure.com/offres-365-outil-alideals/com.offers365.app/download/1.0.7', '_blank')}
                 data-testid="button-download-apkpure"
               >
                 <ExternalLink className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5 group-hover:text-primary transition-colors`} />
