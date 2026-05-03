@@ -15,7 +15,7 @@ const translations = {
     'nav.contact': 'اتصل بنا',
     'nav.download': 'تحميل التطبيق',
     
-    'hero.badge': 'الإصدار 1.0.5 متاح الآن',
+    'hero.badge': 'الإصدار 1.0.7 متاح الآن',
     'hero.title': 'أفضل العروض والأسعار بضغطة زر واحدة',
     'hero.subtitle': 'تطبيق يساعدك في الحصول على أفضل سعر ممكن لأي منتج من منتجات علي اكسبراس بضغطة زر واحدة، انسخ رابط المنتج، قم بلصقه في التطبيق، وتمتع بأفضل الخصومات، تحديث للعروض الرائجة و الكوبونات بشكل دوري، حمل التطبيق ووفر أموالك!',
     'hero.size': 'الحجم: 38 Mo',
@@ -82,7 +82,7 @@ const translations = {
     'delete.error': 'Error deleting account',
     'password': 'Password',
     
-    'hero.badge': 'Version 1.0.5 Available Now',
+    'hero.badge': 'Version 1.0.7 Available Now',
     'hero.title': 'The Best Deals & Prices with One Click',
     'hero.subtitle': 'An app that helps you get the best possible price for any product on AliExpress with just one click. \n Copy the product link, paste it into the app, and enjoy the best discounts. Get regular updates on trending deals and coupons. \n Download the app and start saving money!',
     'hero.size': 'Size: 38 Mo',
