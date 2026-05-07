@@ -48,7 +48,7 @@ export function Hero() {
 
                 
                 
-                onClick={() => window.open('https://raw.githubusercontent.com/Rabahbelksier/File_app/main/offres%20365%20V1.0.7.apk?raw=true', '_blank')}
+                onClick={() => window.open('https://raw.githubusercontent.com/Rabahbelksier/File_app/main/offres%20365%20V1.0.8.apk?raw=true', '_blank')}
               >
                 <Download className={`${isRtl ? 'ml-2' : 'mr-2'} w-5 h-5`} />
                 {t('hero.download.apk')}
