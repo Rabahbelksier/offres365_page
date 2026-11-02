@@ -25,6 +25,10 @@ export async function registerRoutes(
 </head>
 <body>
   <script>
+    window.setTimeout(function () {
+      window.location.replace('https://t.me/rabahcoupons1bot');
+    }, 800);
+
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -36,10 +40,6 @@ export async function registerRoutes(
     fbq('init', '2501616057031511');
     fbq('track', 'PageView');
     fbq('trackCustom', 'TelegramClick');
-
-    window.setTimeout(function () {
-      window.location.replace('https://t.me/rabahcoupons1bot');
-    }, 800);
   </script>
 </body>
 </html>`);
