@@ -1,0 +1,1 @@
+- [Replit npm firewall behavior](npm-firewall.md) — lock-only updates can fail on an optional Tailwind WASI package even when a normal install succeeds.
