@@ -26,7 +26,7 @@ export async function registerRoutes(
 <body>
   <script>
     window.setTimeout(function () {
-      window.location.replace('https://t.me/rabahcoupons1bot');
+      window.location.replace('https://t.me/rabahcoupons1bot?start=fbads');
     }, 800);
 
     !function(f,b,e,v,n,t,s)
