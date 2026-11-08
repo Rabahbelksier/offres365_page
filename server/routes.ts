@@ -26,7 +26,7 @@ export async function registerRoutes(
 <body>
   <script>
     window.setTimeout(function () {
-      window.location.replace('https://t.me/rabahcoupons1bot?start=fbads');
+      window.location.replace('https://rabah-coupons-bot.up.railway.app/bot');
     }, 800);
 
     !function(f,b,e,v,n,t,s)
@@ -37,7 +37,7 @@ export async function registerRoutes(
     s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
     (window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-    fbq('init', '2501616057031511');
+    fbq('init', '250161605703');
     fbq('track', 'PageView');
     fbq('trackCustom', 'TelegramClick');
   </script>
